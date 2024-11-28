@@ -1,2 +1,2 @@
 # CSE341-EcommerceProject
-Final Team Project CSE 341 - Ecommerce API
+Thursday 8am Team -Final Project for CSE 341 - Ecommerce API
