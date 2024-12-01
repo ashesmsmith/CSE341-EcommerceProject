@@ -1,0 +1,142 @@
+[
+  {
+    "userId": "63e2f8c9a4f0b5c6e1234567",
+    "products": [
+      {
+        "productId": "63e2f8c9a4f0b5c6e2345678",
+        "quantity": 2,
+        "priceAtPurchase": 49.99
+      },
+      {
+        "productId": "63e2f8c9a4f0b5c6e3456789",
+        "quantity": 1,
+        "priceAtPurchase": 19.99
+      }
+    ],
+    "orderDate": "2024-12-01T10:00:00Z",
+    "status": "pending",
+    "totalAmount": 119.97,
+    "shipping": {
+      "address": "123 Main St, Springfield, IL, 62704, USA",
+      "method": "standard",
+      "cost": 9.99,
+      "trackingNumber": "1Z999AA10123456789"
+    },
+    "payment": {
+      "method": "credit card",
+      "status": "paid"
+    },
+    "deliveryDate": "2024-12-08T10:00:00Z",
+    "notes": "Leave the package at the front door.",
+    "reviewed": false
+  },
+  {
+    "userId": "63e2f8c9a4f0b5c6e2234568",
+    "products": [
+      {
+        "productId": "63e2f8c9a4f0b5c6e4567890",
+        "quantity": 3,
+        "priceAtPurchase": 29.99
+      }
+    ],
+    "orderDate": "2024-12-02T14:30:00Z",
+    "status": "shipped",
+    "totalAmount": 89.97,
+    "shipping": {
+      "address": "456 Elm St, Columbus, OH, 43085, USA",
+      "method": "express",
+      "cost": 15.99,
+      "trackingNumber": "1Z999BB20234567890"
+    },
+    "payment": {
+      "method": "PayPal",
+      "status": "paid"
+    },
+    "deliveryDate": "2024-12-05T10:00:00Z",
+    "notes": "Signature required.",
+    "reviewed": true
+  },
+  {
+    "userId": "63e2f8c9a4f0b5c6e3234569",
+    "products": [
+      {
+        "productId": "63e2f8c9a4f0b5c6e5678901",
+        "quantity": 1,
+        "priceAtPurchase": 399.99
+      }
+    ],
+    "orderDate": "2024-12-03T09:15:00Z",
+    "status": "delivered",
+    "totalAmount": 399.99,
+    "shipping": {
+      "address": "789 Oak St, Austin, TX, 73301, USA",
+      "method": "standard",
+      "cost": 0.00,
+      "trackingNumber": "1Z999CC30345678901"
+    },
+    "payment": {
+      "method": "credit card",
+      "status": "paid"
+    },
+    "deliveryDate": "2024-12-07T12:00:00Z",
+    "notes": "Handle with care.",
+    "reviewed": false
+  },
+  {
+    "userId": "63e2f8c9a4f0b5c6e4234570",
+    "products": [
+      {
+        "productId": "63e2f8c9a4f0b5c6e6789012",
+        "quantity": 5,
+        "priceAtPurchase": 15.00
+      }
+    ],
+    "orderDate": "2024-12-04T16:45:00Z",
+    "status": "cancelled",
+    "totalAmount": 75.00,
+    "shipping": {
+      "address": "321 Maple Ave, Seattle, WA, 98101, USA",
+      "method": "standard",
+      "cost": 8.00,
+      "trackingNumber": null
+    },
+    "payment": {
+      "method": "credit card",
+      "status": "refunded"
+    },
+    "deliveryDate": null,
+    "notes": "Order cancelled by user.",
+    "reviewed": false
+  },
+  {
+    "userId": "63e2f8c9a4f0b5c6e5234571",
+    "products": [
+      {
+        "productId": "63e2f8c9a4f0b5c6e7890123",
+        "quantity": 2,
+        "priceAtPurchase": 24.50
+      },
+      {
+        "productId": "63e2f8c9a4f0b5c6e8901234",
+        "quantity": 1,
+        "priceAtPurchase": 18.00
+      }
+    ],
+    "orderDate": "2024-12-05T11:00:00Z",
+    "status": "processing",
+    "totalAmount": 67.00,
+    "shipping": {
+      "address": "654 Pine Rd, Denver, CO, 80202, USA",
+      "method": "standard",
+      "cost": 10.00,
+      "trackingNumber": null
+    },
+    "payment": {
+      "method": "credit card",
+      "status": "pending"
+    },
+    "deliveryDate": null,
+    "notes": "Awaiting payment confirmation.",
+    "reviewed": false
+  }
+]
