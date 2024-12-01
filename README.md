@@ -16,8 +16,8 @@ npm install
 
 ### 3. Set up the environment file
 Create a .env file in the root of the project directory and define the following variables:
--PORT: Specify the port number the server will run on
---MONGODB_URI: Provide the MongoDB connection string
+- PORT: Specify the port number the server will run on
+- MONGODB_URI: Provide the MongoDB connection string
 
 ### 4. Configure .gitignore
 Ensure the following files and directories are added to the .gitignore file before committing:
