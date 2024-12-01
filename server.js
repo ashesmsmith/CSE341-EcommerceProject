@@ -5,27 +5,36 @@ const cors = require("cors")
 const mongoose = require("mongoose")
 const mongodbURI = process.env.MONGODB_URI
 const port = process.env.PORT
-const connectDB = require("./modals")
-const errorHandling = require("./utils/erorrHandling")
+const connectDB = require("./db")
+const router = require("./routes")
+const errorHandling = require("./utils/errorHandling")
 
 if (!port) {
     throw new Error("Port is not defined in the env file")
 }
 
+// Connect to MongoDB
 if (!mongodbURI) {
-    throw new Error("Invalid MongoDB URI")
+    throw new Error("MongoDB URI is not defined in the env file")
 }
-
 connectDB(mongodbURI)
 
+// Middleware
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get("/", (req, res) => {
-    res.send("Hello World")
-})
+// Routes
+app.use("/", router)
 
+// Error handling
+app.use("*", (req, res) => {
+    res.status(404).json({
+        success: false,
+        message: "Route not found"
+    })
+})
 app.use(errorHandling)
 
+// Start the server
 app.listen(port, () => console.log(`Server running on port ${port}`))
