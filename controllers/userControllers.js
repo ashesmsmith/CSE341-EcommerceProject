@@ -28,7 +28,12 @@ const createUser = async (req, res) => {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
-        address: req.body.address
+        address: {
+            street: req.body.street,
+            city: req.body.city,
+            state: req.body.state,
+            zipCode: req.body.zipCode},
+        accountType: req.body.accountType
     };
 
     const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
@@ -48,7 +53,12 @@ const updateUser = async (req, res) => {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
-        address: req.body.address
+        address: {
+            street: req.body.street,
+            city: req.body.city,
+            state: req.body.state,
+            zipCode: req.body.zipCode},
+        accountType: req.body.accountType
     };
 
     const response = await mongodb.getDatabase().db().collection('users').replaceOne({ _id: userId }, user);
