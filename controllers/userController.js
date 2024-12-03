@@ -1,86 +1,49 @@
-const mongodb = require('../data/database');
-const ObjectId = require('mongodb').ObjectId;
+const mongoose = require('mongoose');
+const ObjectId = mongoose.ObjectId;
+const User = require('../models/userModel');
 
 // Display All Users
-const getUsers = async (req, res) => {
-    const result = await mongodb.getDatabase().db().collection('users').find();
+const getUsers = async (req, res, next) => {
+    // #swagger.description = 'Display All Users'
+    // #swagger.tags = ['users]
+    try {
+        const result = await User.find();
 
-    result.toArray().then((users) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users);
-    });
+        if (result.length > 0) {
+            return res.status(200).json({
+                success: true,
+                data: result
+            })
+        } else {
+            return res.status(200).json({
+                success: true,
+                data: [],
+                message: "No user found"
+            })
+        }
+    } catch (error) {
+        next(error)
+    }
 };
 
 // Display Single User
-const getUserById = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection('users').find({ _id: userId });
+const getUserById = async (req, res, next) => {
 
-    result.toArray().then((users) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users[0]);
-    });
 };
 
 // Create New User
-const createUser = async (req, res) => {
-    const user = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        address: {
-            street: req.body.street,
-            city: req.body.city,
-            state: req.body.state,
-            zipCode: req.body.zipCode},
-        accountType: req.body.accountType
-    };
+const createUser = async (req, res, next) => {
 
-    const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
-
-    if (response.acknowledged) {
-        res.status(204).json(response);
-    } else {
-        res.status(500).json(response.error) || 'An error occurred while adding the user.';
-    }
 };
 
 // Update User
-const updateUser = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+const updateUser = async (req, res, next) => {
 
-    const user = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        address: {
-            street: req.body.street,
-            city: req.body.city,
-            state: req.body.state,
-            zipCode: req.body.zipCode},
-        accountType: req.body.accountType
-    };
-
-    const response = await mongodb.getDatabase().db().collection('users').replaceOne({ _id: userId }, user);
-
-    if (response.acknowledged) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error) || 'An error occurred while updating the user.';
-    }
 };
 
 // Delete User
-const deleteUser = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+const deleteUser = async (req, res, next) => {
 
-    const response = await mongodb.getDatabase().db().collection('users').deleteOne({ _id: userId });
-
-    if (response.deletedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error) || 'An error occurred while deleting the user.';
-    }
 };
 
 module.exports = { getUsers, getUserById, createUser, updateUser, deleteUser }
