@@ -162,7 +162,7 @@ const updateOrderById = async(req, res, next) => {
 
         const updatedOrder = req.body
 
-        const result = await Order.findOneAndReplace({ _id: id}, updatedOrder, { returnDocument: "after"})
+        const result = await Order.findOneAndReplace({_id: id}, updatedOrder, { returnDocument: "after"})
 
         if (!result) {
             return res.status(404).json({
@@ -181,5 +181,44 @@ const updateOrderById = async(req, res, next) => {
     }
 }
 
+const deleteOrderById = async(req, res, next) => {
+    /* #swagger.description = "Delete an order by its ID"
+    #swagger.tags = ["orders"] */
+    try {
+        const id = req.params.id
 
-module.exports = { findAll, findById, createOrder, updateOrderById }
+        if (!id) {
+            return res.status(400).json({
+                success: false,
+                message: "ID is missing."
+            })
+        }
+
+        if (!ObjectId.isValid(id)) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid ID format"
+            })
+        }
+
+        const result = await Order.findByIdAndDelete({_id: id})        
+        console.log("Delete result: ", result)
+
+        if (!result) {
+            return res.status(404).json({
+                success: false,
+                message: "Order not found or could not be deleted"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: `The order of ${id} has been deleted successfully.`
+        })
+
+    } catch (error) {
+        next(error)
+    }
+}
+
+module.exports = { findAll, findById, createOrder, updateOrderById, deleteOrderById }

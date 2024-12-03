@@ -70,3 +70,6 @@ Content-Type: application/json
     "orderDate": "2024-12-01",
     "createdAt": "2024-12-01"
 }
+
+### Delete an order by ID
+DELETE {{baseURL}}/orders/674f2de7ab88058ffb6ab0f2
