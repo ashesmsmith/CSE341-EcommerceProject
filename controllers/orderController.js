@@ -3,10 +3,21 @@ const ObjectId = mongoose.Types.ObjectId
 const Order = require("../models/orderModel")
 
 const findAll = async (req, res, next) => {
-    // #swagger.description = "Retrieve all orders"
-    // #swagger.tags = ["orders"]
+    /* #swagger.description = "Retrieve all the user's orders.  Admin users can retrieve all orders."
+       #swagger.tags = ["orders"] */
     try {
-        const result = await Order.find()
+        let result
+        const { isAdmin, userId } = req.user
+
+        if (isAdmin) {
+            // Admin: fetch all orders
+            result = await Order.find()
+        } else {
+            // Non-admin: fetch only orders belonging to the user
+            result = await Order.find({ userId })
+        }
+        
+        console.log("Query Result: ", result)
 
         if (result.length > 0) {
             return res.status(200).json({
@@ -28,7 +39,7 @@ const findAll = async (req, res, next) => {
 
 const findById = async(req, res, next) => {
     /* #swagger.description = "Retrieve a particular order by ID"
-    #swagger.tags = ["orders"] */
+       #swagger.tags = ["orders"] */
     try {
         const id = req.params.id
 
@@ -64,5 +75,7 @@ const findById = async(req, res, next) => {
         next(error)
     }
 }
+
+
 
 module.exports = { findAll, findById }
