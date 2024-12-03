@@ -67,7 +67,6 @@ Content-Type: application/json
         "status": "paid"
     },
     "notes": "Leave the parcel to the doorman.",
-    "reviewed": false,
-    "createdAt": "2024-12-01",
-    "orderDate": "2024-12-01"
+    "orderDate": "2024-12-01",
+    "createdAt": "2024-12-01"
 }

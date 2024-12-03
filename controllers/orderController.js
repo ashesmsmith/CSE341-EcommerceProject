@@ -146,23 +146,19 @@ const updateOrderById = async(req, res, next) => {
         const {
             userId,
             products,
-            orderDate,
-            status,
             totalAmount,
             shipping,
             payment,
-            deliveryDate,
-            notes,
-            reviewed,
-            createdAt
-        } = req.body
+            createdAt,
+            orderDate,
+         } = req.body
 
-        if (!userId || !products || !totalAmount || !shipping || !payment) {
+         if (!userId || !products || !totalAmount || !shipping || !payment || !createdAt || !orderDate) {
             return res.status(400).json({
                 success: false,
-                message: "Invalid parameters.  userId, products, totalAmount, shipping, and payment fields are required."
+                message: "Invalid parameters: userId, products, orderDate, status, totalAmount, shipping, and payment are required."
             })
-        }
+         }
 
         const updatedOrder = req.body
 
@@ -184,5 +180,6 @@ const updateOrderById = async(req, res, next) => {
         next(error)
     }
 }
+
 
 module.exports = { findAll, findById, createOrder, updateOrderById }
