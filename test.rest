@@ -1,2 +1,7 @@
+@baseURL = http://localhost:3000
+
 ### Retrieve all orders
-http://localhost:3000/orders
+{{baseURL}}/orders
+
+### Retrieve an order by ID
+{{baseURL}}/orders/674cc5b4d7dbc7a8d09a77b7
