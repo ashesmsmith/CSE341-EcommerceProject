@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const userController = require('../controllers/userControllers');
+const userController = require('../controllers/userController');
 
 // Display All or Single User
 router.get('/', userController.getUsers);
