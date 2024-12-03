@@ -44,7 +44,7 @@ const findById = async(req, res, next) => {
         if (!id) {
             return res.status(400).json({
                 success: false,
-                message: "ID parameter is missing"
+                message: "ID parameter is missing."
             })
         }
 
@@ -75,6 +75,8 @@ const findById = async(req, res, next) => {
 }
 
 const createOrder = async(req, res, next) => {
+    /* #swagger.description = "Create a new order"
+    #swagger.tags = ["orders"] */
     try {
         const {
             userId,
@@ -104,6 +106,13 @@ const createOrder = async(req, res, next) => {
          })
 
          const result = await newOrder.save()
+         
+         if (!result) {
+            return res.status(404).json({
+                success: false,
+                message: "Unable to create order"
+            })
+         }
 
          return res.status(201).json({
             success: true,
@@ -115,5 +124,65 @@ const createOrder = async(req, res, next) => {
     }
 }
 
+const updateOrderById = async(req, res, next) => {
+    /* #swagger.description = "update an order by its ID"
+       #swagger.tags = ["orders"] */
+    try {
+        const id = req.params.id
 
-module.exports = { findAll, findById, createOrder }
+        if (!id) {
+            return res.status(400).json({
+                success: false,
+                message: "ID parameter is missing."
+            })
+        }
+        if (!ObjectId.isValid(id)) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid ID format"
+            })
+        }
+
+        const {
+            userId,
+            products,
+            orderDate,
+            status,
+            totalAmount,
+            shipping,
+            payment,
+            deliveryDate,
+            notes,
+            reviewed,
+            createdAt
+        } = req.body
+
+        if (!userId || !products || !totalAmount || !shipping || !payment) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid parameters.  userId, products, totalAmount, shipping, and payment fields are required."
+            })
+        }
+
+        const updatedOrder = req.body
+
+        const result = await Order.findOneAndReplace({ _id: id}, updatedOrder, { returnDocument: "after"})
+
+        if (!result) {
+            return res.status(404).json({
+                success: false,
+                message: "Order not found or could not be updated"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            data: result
+        })
+
+    } catch (error) {
+        next(error)
+    }
+}
+
+module.exports = { findAll, findById, createOrder, updateOrderById }

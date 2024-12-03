@@ -4,5 +4,6 @@ const orderController = require("../controllers/orderController")
 orderRoute.get("/", orderController.findAll)
 orderRoute.get("/:id", orderController.findById)
 orderRoute.post("/", orderController.createOrder)
+orderRoute.put("/:id", orderController.updateOrderById)
 
 module.exports = orderRoute

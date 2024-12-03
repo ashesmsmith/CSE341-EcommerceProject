@@ -36,3 +36,38 @@ Content-Type: application/json
     },
     "notes": "Leave the parcel to the doorman."
 }
+
+
+### Update an order by ID
+PUT {{baseURL}}/orders/674f2de7ab88058ffb6ab0f2
+Content-Type: application/json
+
+{
+    "userId": "ABC12345",
+    "products": [
+        {
+            "productId": "XYZ999",
+            "quantity": 1,
+            "priceAtPurchase": 20.11
+        },
+        {
+            "productId": "XYZ888",
+            "quantity": 3,
+            "priceAtPurchase": 2.05
+        }
+    ],
+    "totalAmount": 26.26,
+    "shipping": {
+        "address": "111 Main Street, ABC ",
+        "method": "standard",
+        "cost": 5
+    },
+    "payment": {
+        "method": "credit card",
+        "status": "paid"
+    },
+    "notes": "Leave the parcel to the doorman.",
+    "reviewed": false,
+    "createdAt": "2024-12-01",
+    "orderDate": "2024-12-01"
+}
