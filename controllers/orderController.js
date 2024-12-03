@@ -16,8 +16,6 @@ const findAll = async (req, res, next) => {
             // Non-admin: fetch only orders belonging to the user
             result = await Order.find({ userId })
         }
-        
-        console.log("Query Result: ", result)
 
         if (result.length > 0) {
             return res.status(200).json({
@@ -76,6 +74,46 @@ const findById = async(req, res, next) => {
     }
 }
 
+const createOrder = async(req, res, next) => {
+    try {
+        const {
+            userId,
+            products,
+            totalAmount,
+            shipping,
+            payment,
+            deliveryDate,
+            notes,
+         } = req.body
+
+         if (!userId || !products || !totalAmount || !shipping || !payment) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid parameters: userId, products, orderDate, status, totalAmount, shipping, and payment are required."
+            })
+         }
+
+         const newOrder = new Order({
+            userId,
+            products,
+            totalAmount,
+            shipping,
+            payment,
+            deliveryDate,
+            notes,
+         })
+
+         const result = await newOrder.save()
+
+         return res.status(201).json({
+            success: true,
+            data: result
+         })
+
+    } catch (error) {
+        next(error)
+    }
+}
 
 
-module.exports = { findAll, findById }
+module.exports = { findAll, findById, createOrder }

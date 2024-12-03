@@ -1,7 +1,38 @@
 @baseURL = http://localhost:3000
 
 ### Retrieve all orders
-{{baseURL}}/orders
+GET {{baseURL}}/orders
 
 ### Retrieve an order by ID
-{{baseURL}}/orders/674cc5b4d7dbc7a8d09a77b7
+GET {{baseURL}}/orders/674cc5b4d7dbc7a8d09a77b7
+
+### Create a new order
+POST {{baseURL}}/orders
+Content-Type: application/json
+
+{
+    "userId": "ABC12345",
+    "products": [
+        {
+            "productId": "XYZ999",
+            "quantity": 1,
+            "priceAtPurchase": 20.11
+        },
+        {
+            "productId": "XYZ888",
+            "quantity": 3,
+            "priceAtPurchase": 2.05
+        }
+    ],
+    "totalAmount": 26.26,
+    "shipping": {
+        "address": "111 Main Street, ABC ",
+        "method": "standard",
+        "cost": 5
+    },
+    "payment": {
+        "method": "credit card",
+        "status": "pending"
+    },
+    "notes": "Leave the parcel to the doorman."
+}
