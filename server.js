@@ -24,15 +24,6 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// Waiting to be modified after the user collection is done
-app.use((req, res, next) => {
-    req.user = {
-        isAdmin: false,
-        userId: "63e2f8c9a4f0b5c6e1234567"
-    }
-    next()
-})
-
 // Routes
 app.use("/", router)
 

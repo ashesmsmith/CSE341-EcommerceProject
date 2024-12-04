@@ -1,14 +1,14 @@
 [
   {
-    "userId": "63e2f8c9a4f0b5c6e1234567",
+    "userId": { "$oid": "63e2f8c9a4f0b5c6e1234567" },
     "products": [
       {
-        "productId": "63e2f8c9a4f0b5c6e2345678",
+        "productId": { "$oid": "63e2f8c9a4f0b5c6e2345678" },
         "quantity": 2,
         "priceAtPurchase": 49.99
       },
       {
-        "productId": "63e2f8c9a4f0b5c6e3456789",
+        "productId": { "$oid": "63e2f8c9a4f0b5c6e3456789" },
         "quantity": 1,
         "priceAtPurchase": 19.99
       }
@@ -31,10 +31,10 @@
     "reviewed": false
   },
   {
-    "userId": "63e2f8c9a4f0b5c6e2234568",
+    "userId": { "$oid": "63e2f8c9a4f0b5c6e2234568" },
     "products": [
       {
-        "productId": "63e2f8c9a4f0b5c6e4567890",
+        "productId": { "$oid": "63e2f8c9a4f0b5c6e4567890" },
         "quantity": 3,
         "priceAtPurchase": 29.99
       }
@@ -57,10 +57,10 @@
     "reviewed": true
   },
   {
-    "userId": "63e2f8c9a4f0b5c6e3234569",
+    "userId": { "$oid": "63e2f8c9a4f0b5c6e3234569" },
     "products": [
       {
-        "productId": "63e2f8c9a4f0b5c6e5678901",
+        "productId": { "$oid": "63e2f8c9a4f0b5c6e5678901" },
         "quantity": 1,
         "priceAtPurchase": 399.99
       }
@@ -83,10 +83,10 @@
     "reviewed": false
   },
   {
-    "userId": "63e2f8c9a4f0b5c6e4234570",
+    "userId": { "$oid": "63e2f8c9a4f0b5c6e4234570" },
     "products": [
       {
-        "productId": "63e2f8c9a4f0b5c6e6789012",
+        "productId": { "$oid": "63e2f8c9a4f0b5c6e6789012" },
         "quantity": 5,
         "priceAtPurchase": 15.00
       }
@@ -109,15 +109,15 @@
     "reviewed": false
   },
   {
-    "userId": "63e2f8c9a4f0b5c6e5234571",
+    "userId": { "$oid": "63e2f8c9a4f0b5c6e5234571" },
     "products": [
       {
-        "productId": "63e2f8c9a4f0b5c6e7890123",
+        "productId": { "$oid": "63e2f8c9a4f0b5c6e7890123" },
         "quantity": 2,
         "priceAtPurchase": 24.50
       },
       {
-        "productId": "63e2f8c9a4f0b5c6e8901234",
+        "productId": { "$oid": "63e2f8c9a4f0b5c6e8901234" },
         "quantity": 1,
         "priceAtPurchase": 18.00
       }

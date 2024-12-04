@@ -1,16 +1,16 @@
-const { Schema, model } = require("mongoose")
+const { Schema, model, Types } = require("mongoose")
 
 const orderSchema = new Schema(
     {
         userId: {
-            type: String,
+            type: Types.ObjectId,
             ref: "User",
             required: true
         },
         products: [
             {
                 productId: {
-                    type: String,
+                    type: Types.ObjectId,
                     ref: "Product",
                     required: true,
                 },
