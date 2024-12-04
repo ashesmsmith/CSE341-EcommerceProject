@@ -2,7 +2,7 @@ require("dotenv").config()
 const router = require("express").Router()
 const orderRoute = require("./orderRoute")
 const userRoute = require("./userRoute")
-const checkAuth = require("../utils/checkAuth")
+const { checkAuth } = require("../utils/Oauth")
 
 router.get("/", (req, res) =>{
     const docLink = `${process.env.BASE_URL}/api-docs`
