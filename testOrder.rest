@@ -1,4 +1,6 @@
 @baseURL = http://localhost:3000
+### Retrieve user profile
+GET {{baseURL}}/profile
 
 ### Retrieve all orders
 GET {{baseURL}}/orders/all
@@ -7,7 +9,7 @@ GET {{baseURL}}/orders/all
 GET {{baseURL}}/orders/user/{userId}
 
 ### Retrieve an order by ID
-GET {{baseURL}}/orders/{id}
+GET {{baseURL}}/orders/674fb7bdcc9ffd86f47853e1
 
 ### Create a new order
 POST {{baseURL}}/orders
@@ -47,5 +49,6 @@ Content-Type: application/json
 
 # { copy an order object and modify something }
 
+
 ### Delete an order by ID
-DELETE {{baseURL}}/orders/{id}
+DELETE {{baseURL}}/orders/675015781801d4e131360cf7

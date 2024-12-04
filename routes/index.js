@@ -2,7 +2,7 @@ require("dotenv").config()
 const router = require("express").Router()
 const orderRoute = require("./orderRoute")
 const userRoute = require("./userRoute")
-const { requiresAuth } = require("express-openid-connect")
+const checkAuth = require("../utils/checkAuth")
 
 router.get("/", (req, res) =>{
     const docLink = `${process.env.BASE_URL}/api-docs`
@@ -18,7 +18,7 @@ router.get("/", (req, res) =>{
         })
     }})
 
-router.get("/profile", requiresAuth(), (req, res) => {
+router.get("/profile", checkAuth, (req, res) => {
     // #swagger.tags = ["profile"]
     return res.json(req.oidc.user)
 })
