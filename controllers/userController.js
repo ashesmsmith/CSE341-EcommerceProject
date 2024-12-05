@@ -8,7 +8,7 @@ const getUsers = async (req, res, next) => {
     // #swagger.tags = ['users']
     
     try {
-        const result = await User.find(); 
+        const result = await User.find();
 
         if (result.length > 0) {
             return res.status(200).json({
@@ -23,6 +23,7 @@ const getUsers = async (req, res, next) => {
         }
     } catch (error) {
         next(error);
+
     }
 };
 
@@ -66,15 +67,15 @@ const createUser = async (req, res, next) => {
     // #swagger.tags = ['users']
 
     try {
-        const { 
-            firstName, 
-            lastName, 
-            email, 
+        const {
+            firstName,
+            lastName,
+            email,
             phone,
-            street, 
-            city, 
-            state, 
-            zipCode, 
+            street,
+            city,
+            state,
+            zipCode,
             accountType} = req.body;
 
         if (!firstName || !lastName || !email || !phone || !street || !city || !state || !zipCode || !accountType) {
@@ -84,15 +85,15 @@ const createUser = async (req, res, next) => {
             });
         }
 
-        const newUser = new User({ 
-            firstName, 
-            lastName, 
+        const newUser = new User({
+            firstName,
+            lastName,
             email,
             phone,
-            street, 
-            city, 
-            state, 
-            zipCode, 
+            street,
+            city,
+            state,
+            zipCode,
             accountType })
 
         const result = await newUser.save()
@@ -103,27 +104,6 @@ const createUser = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
-
-    const newUser = new User({
-      firstName,
-      lastName,
-      email,
-      phone,
-      street,
-      city,
-      state,
-      zipCode,
-      accountType
-    });
-
-    const result = await newUser.save();
-    return res.status(201).json({
-      success: true,
-      data: result
-    });
-  } catch (error) {
-    next(error);
-  }
 };
 
 // Update User
@@ -141,14 +121,14 @@ const updateUser = async (req, res, next) => {
         const userId = req.params.id
 
         const {
-            firstName, 
-            lastName, 
+            firstName,
+            lastName,
             email,
             phone,
-            street, 
-            city, 
-            state, 
-            zipCode, 
+            street,
+            city,
+            state,
+            zipCode,
             accountType} = req.body
 
         if (!firstName || !lastName || !email || !phone || !street || !city || !state || !zipCode || !accountType) {
@@ -158,15 +138,15 @@ const updateUser = async (req, res, next) => {
             })
         }
 
-        const updatedUser = new User({ 
-            firstName, 
-            lastName, 
-            email, 
+        const updatedUser = new User({
+            firstName,
+            lastName,
+            email,
             phone,
-            street, 
-            city, 
-            state, 
-            zipCode, 
+            street,
+            city,
+            state,
+            zipCode,
             accountType })
 
         const result = await User.findById(userId, updatedUser, {new: true})
@@ -182,34 +162,10 @@ const updateUser = async (req, res, next) => {
             message: `User ${userId} successfully updated`
         })
 
-    const updatedUser = new User({
-      firstName,
-      lastName,
-      email,
-      phone,
-      street,
-      city,
-      state,
-      zipCode,
-      accountType
-    });
-
-    const result = await User.findById(userId, updatedUser, { new: true });
-    if (!result) {
-      return res.status(404).json({
-        success: false,
-        message: `User ${userId} not found`
-      });
+    } catch (error) {
+        next(error);
     }
-    return res.status(200).json({
-      success: true,
-      data: result,
-      message: `User ${userId} successfully updated`
-    });
-  } catch (error) {
-    next(error);
-  }
-};
+}
 
 // Delete User
 const deleteUser = async (req, res, next) => {
@@ -234,24 +190,16 @@ const deleteUser = async (req, res, next) => {
             });
         }
 
-    const userId = new ObjectId(req.params.id);
-    const result = await User.findOneAndDelete({ _id: userId });
-
-    if (result.deletedCount === 0) {
-      return res.status(404).json({
-        success: false,
-        message: 'User not found'
-      });
+        return res.status(200).json({
+            success: true,
+            message: `User ${userId} deleted successfully`,
+            result
+        });
+        
+    
+    } catch (error) {
+        next(error);
     }
-
-    return res.status(200).json({
-      success: true,
-      message: `User ${userId} deleted successfully`,
-      result
-    });
-  } catch (error) {
-    next(error);
-  }
 };
 
-module.exports = { getUsers, getUserById, createUser, updateUser, deleteUser };
+module.exports = { getUsers, getUserById, createUser, updateUser, deleteUser }
