@@ -1,46 +1,57 @@
 [
-    {
-        "firstName": "Admin",
-        "lastName": "Account",
-        "email": "admin@email.com",
-        "phone": 1234567890,
-        "street": "123 Main Avenue",
-        "city": "Somewhere",
-        "state": "ID",
-        "zipCode": 12345,
-        "accountType": "Admin"
-    },
-    {
-        "firstName": "Test",
-        "lastName": "Account",
-        "email": "testing@email.com",
-        "phone": 9876543210,
-        "street": "456 Main Avenue",
-        "city": "Nowhere",
-        "state": "ID",
-        "zipCode": 54321,
-        "accountType": "Customer"
-    },
-    {
-        "firstName": "Another",
-        "lastName": "Test",
-        "email": "atest@email.com",
-        "phone": 4561237890,
-        "street": "789 Main Avenue",
-        "city": "Over There",
-        "state": "ID",
-        "zipCode": 98765,
-        "accountType": "Customer"
-    },
-    {
-        "firstName": "Min-ting",
-        "lastName": "Chuang",
-        "email": "lisachuang2000@gmail.com",
-        "phone": 456789123,
-        "street": "321 Main Road",
-        "city": "Someplace",
-        "state": "ID",
-        "zipCode": 98765,
-        "accountType": "Admin"
-    }
+  {
+    "firstName": "Admin",
+    "lastName": "Account",
+    "email": "admin@email.com",
+    "phone": 1234567890,
+    "street": "123 Main Avenue",
+    "city": "Somewhere",
+    "state": "ID",
+    "zipCode": 12345,
+    "accountType": "Admin"
+  },
+  {
+    "firstName": "Test",
+    "lastName": "Account",
+    "email": "testing@email.com",
+    "phone": 9876543210,
+    "street": "456 Main Avenue",
+    "city": "Nowhere",
+    "state": "ID",
+    "zipCode": 54321,
+    "accountType": "Customer"
+  },
+  {
+    "firstName": "Another",
+    "lastName": "Test",
+    "email": "atest@email.com",
+    "phone": 4561237890,
+    "street": "789 Main Avenue",
+    "city": "Over There",
+    "state": "ID",
+    "zipCode": 98765,
+    "accountType": "Customer"
+  },
+  {
+    "firstName": "Min-ting",
+    "lastName": "Chuang",
+    "email": "lisachuang2000@gmail.com",
+    "phone": 456789123,
+    "street": "321 Main Road",
+    "city": "Someplace",
+    "state": "ID",
+    "zipCode": 98765,
+    "accountType": "Admin"
+  },
+  {
+    "firstName": "Nelson",
+    "lastName": "Petro",
+    "email": "nelsonpetrodoria@gmail.com",
+    "phone": 8019876543,
+    "street": "123 Fake St",
+    "city": "Lehi",
+    "state": "UT",
+    "zipCode": 12345,
+    "accountType": "Admin"
+  }
 ]

@@ -71,7 +71,7 @@
     "shipping": {
       "address": "789 Oak St, Austin, TX, 73301, USA",
       "method": "standard",
-      "cost": 0.00,
+      "cost": 0.0,
       "trackingNumber": "1Z999CC30345678901"
     },
     "payment": {
@@ -88,16 +88,16 @@
       {
         "productId": { "$oid": "63e2f8c9a4f0b5c6e6789012" },
         "quantity": 5,
-        "priceAtPurchase": 15.00
+        "priceAtPurchase": 15.0
       }
     ],
     "orderDate": "2024-12-04T16:45:00Z",
     "status": "cancelled",
-    "totalAmount": 75.00,
+    "totalAmount": 75.0,
     "shipping": {
       "address": "321 Maple Ave, Seattle, WA, 98101, USA",
       "method": "standard",
-      "cost": 8.00,
+      "cost": 8.0,
       "trackingNumber": null
     },
     "payment": {
@@ -114,21 +114,21 @@
       {
         "productId": { "$oid": "63e2f8c9a4f0b5c6e7890123" },
         "quantity": 2,
-        "priceAtPurchase": 24.50
+        "priceAtPurchase": 24.5
       },
       {
         "productId": { "$oid": "63e2f8c9a4f0b5c6e8901234" },
         "quantity": 1,
-        "priceAtPurchase": 18.00
+        "priceAtPurchase": 18.0
       }
     ],
     "orderDate": "2024-12-05T11:00:00Z",
     "status": "processing",
-    "totalAmount": 67.00,
+    "totalAmount": 67.0,
     "shipping": {
       "address": "654 Pine Rd, Denver, CO, 80202, USA",
       "method": "standard",
-      "cost": 10.00,
+      "cost": 10.0,
       "trackingNumber": null
     },
     "payment": {
