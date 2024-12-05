@@ -1,0 +1,36 @@
+### Display all products
+GET http://localhost:3000/products
+
+### Display a product by ID
+GET http://localhost:3000/products/6751cbc96aac217c1f5aa773
+
+### Create a new product
+POST http://localhost:3000/products/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "productId": 21,
+  "name": "Portable Projector",
+  "category": "Electronics",
+  "price": 249.99,
+  "stock": 30,
+  "description": "Compact projector with 1080p resolution and wireless connectivity.",
+  "imageUrl": "https://example.com/images/portable-projector.jpg"
+}
+
+### Update a product by ID
+PUT http://localhost:3000/products/6751cfdd3010830826923c3e HTTP/1.1
+Content-Type: application/json
+
+{
+  "productId": 21,
+  "name": "Portable Projector",
+  "category": "Electronics",
+  "price": 349.99,
+  "stock": 40,
+  "description": "Compact projector with 1080p resolution and wireless connectivity.",
+  "imageUrl": "https://example.com/images/portable-projector.jpg"
+}
+
+### Delete a product by ID
+DELETE http://localhost:3000/products/6751cfdd3010830826923c3e HTTP/1.1
