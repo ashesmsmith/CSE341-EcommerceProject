@@ -1,10 +1,11 @@
 const productRoute = require('express').Router();
 const productController = require('../controllers/productController');
+const { checkAuth, checkAdmin } = require('../utils/Oauth');
 
-productRoute.get('/', productController.getProducts);
-productRoute.get('/:id', productController.getProductById);
-productRoute.post('/', productController.createProduct);
-productRoute.put('/:id', productController.updateProduct);
-productRoute.delete('/:id', productController.deleteProduct);
+productRoute.get('/', checkAuth, productController.getProducts);
+productRoute.get('/:id', checkAuth, productController.getProductById);
+productRoute.post('/', checkAuth, checkAdmin, productController.createProduct);
+productRoute.put('/:id', checkAuth, checkAdmin, productController.updateProduct);
+productRoute.delete('/:id', checkAuth, checkAdmin, productController.deleteProduct);
 
 module.exports = productRoute;
