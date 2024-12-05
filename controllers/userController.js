@@ -1,83 +1,199 @@
-const mongoose = require("mongoose")
-const ObjectId = mongoose.Types.ObjectId
-const User = require("../models/userModel")
+const mongoose = require('mongoose');
+const ObjectId = mongoose.Types.ObjectId;
+const User = require('../models/userModel');
 
 // Display All Users
-const getUsers = async (req, res) => {
-    const result = await User.find()
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(result);
+const getUsers = async (req, res, next) => {
+    // #swagger.description = 'Display All Users'
     
+    try {
+        const result = await User.find(); 
+
+        if (result.length > 0) {
+            return res.status(200).json({
+                success: true,
+                data: result
+            });
+        } else {
+            return res.status(400).json({
+                success: false,
+                message: "No users found."
+            });
+        }
+    } catch (error) {
+        next(error);
+
+    }
 };
 
-// Display Single User
-const getUserById = async (req, res) => {
-    const userId = req.params.id;
-    if (ObjectId.isValid(userId)) {
-        const result = await User.findById({_id: userId});
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(result);
-    }     
+// Display Single User By Id
+const getUserById = async (req, res, next) => {
+    // #swagger.description = 'Display Single User By Id'
+
+    try {
+        const userId = req.params.id;
+
+        if (!ObjectId.isValid(userId)) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid UserId."
+            });
+        } else {
+            const result = await User.findById(userId);
+
+            if (!result) {
+                return res.status(400).json({
+                    success: false,
+                    message: "User not found."
+                })
+            } else {
+                return res.status(200).json({
+                    success: true,
+                    data: result
+                });
+            }
+        }
+
+    } catch (error) {
+        next(error);
+    }
 };
 
 // Create New User
-const createUser = async (req, res) => {
-    const user = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        address: {
-            street: req.body.street,
-            city: req.body.city,
-            state: req.body.state,
-            zipCode: req.body.zipCode},
-        accountType: req.body.accountType
-    };
+const createUser = async (req, res, next) => {
+    // #swagger.description = 'Create a new user'
 
-    const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
+    try {
+        const { 
+            firstName, 
+            lastName, 
+            email, 
+            phone,
+            street, 
+            city, 
+            state, 
+            zipCode, 
+            accountType} = req.body;
 
-    if (response.acknowledged) {
-        res.status(204).json(response);
-    } else {
-        res.status(500).json(response.error) || 'An error occurred while adding the user.';
+        if (!firstName || !lastName || !email || !phone || !street || !city || !state || !zipCode || !accountType) {
+            return res.status(400).json({
+                success: false,
+                message: "All fields are required."
+            });
+        }
+
+        const newUser = new User({ 
+            firstName, 
+            lastName, 
+            email,
+            phone,
+            street, 
+            city, 
+            state, 
+            zipCode, 
+            accountType })
+
+        const result = await newUser.save()
+        return res.status(201).json ({
+            success: true,
+            data: result
+        });
+    } catch (error) {
+        next(error);
     }
 };
 
 // Update User
-const updateUser = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+const updateUser = async (req, res, next) => {
+    // #swagger.description = 'Update User'
 
-    const user = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        address: {
-            street: req.body.street,
-            city: req.body.city,
-            state: req.body.state,
-            zipCode: req.body.zipCode},
-        accountType: req.body.accountType
-    };
+    try {
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid UserId."
+            })
+        }
+        const userId = req.params.id
 
-    const response = await mongodb.getDatabase().db().collection('users').replaceOne({ _id: userId }, user);
+        const {
+            firstName, 
+            lastName, 
+            email,
+            phone,
+            street, 
+            city, 
+            state, 
+            zipCode, 
+            accountType} = req.body
 
-    if (response.acknowledged) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error) || 'An error occurred while updating the user.';
+        if (!firstName || !lastName || !email || !phone || !street || !city || !state || !zipCode || !accountType) {
+            return res.status(400).json({
+                success: false,
+                message: "All fields are required."
+            })
+        }
+
+        const updatedUser = new User({ 
+            firstName, 
+            lastName, 
+            email, 
+            phone,
+            street, 
+            city, 
+            state, 
+            zipCode, 
+            accountType })
+
+        const result = await User.findById(userId, updatedUser, {new: true})
+        if (!result) {
+            return res.status(404).json({
+                success: false,
+                message: `User ${userId} not found`
+            })
+        }
+        return res.status(200).json({
+            success: true,
+            data: result,
+            message: `User ${userId} successfully updated`
+        })
+
+    } catch (error) {
+        next(error);
     }
-};
+}
 
 // Delete User
-const deleteUser = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+const deleteUser = async (req, res, next) => {
+    // #swagger.description = 'Delete User'
 
-    const response = await mongodb.getDatabase().db().collection('users').deleteOne({ _id: userId });
+    try {
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid UserId"
+            });
+        }
+    
+        const userId = new ObjectId(req.params.id)
+        const result = await User.findOneAndDelete({ _id: userId })
 
-    if (response.deletedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error) || 'An error occurred while deleting the user.';
+        if (result.deletedCount === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "User not found"
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: `User ${userId} deleted successfully`,
+            result
+        });
+        
+    
+    } catch (error) {
+        next(error);
     }
 };
 

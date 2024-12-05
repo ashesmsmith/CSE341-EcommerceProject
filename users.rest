@@ -1,0 +1,40 @@
+### Display All Users
+GET http://localhost:3000/users
+
+### Display Single User By Id
+GET http://localhost:3000/users/6751341f7a01e019ffafb9db
+
+### Create New User
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Delete",
+    "lastName": "Me",
+    "email": "delete@email.com",
+    "phone": 1234567890,
+    "street": "321 Main Road",
+    "city": "Someplace",
+    "state": "ID",
+    "zipCode": 98765,
+    "accountType": "Customer"
+}
+
+### Update User
+PUT http://localhost:3000/users/675136cee61401816959cd73 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Please Delete",
+    "lastName": "Me Still",
+    "email": "stilldelete@email.com",
+    "phone": 9876543210,
+    "street": "654 Main Road",
+    "city": "Nowhere",
+    "state": "ID",
+    "zipCode": 65498,
+    "accountType": "Customer"
+}
+
+### Delete User
+DELETE http://localhost:3000/users/675136cee61401816959cd73 HTTP/1.1

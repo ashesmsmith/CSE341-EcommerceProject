@@ -3,39 +3,33 @@
         "firstName": "Admin",
         "lastName": "Account",
         "email": "admin@email.com",
-        "phone": 987654321,
-        "address": {
-            "street": "123 Main Avenue",
-            "city": "Nowhere",
-            "state": "ID",
-            "zipCode": 54321
-        },
+        "phone": 1234567890,
+        "street": "123 Main Avenue",
+        "city": "Somewhere",
+        "state": "ID",
+        "zipCode": 12345,
         "accountType": "Admin"
     },
     {
         "firstName": "Test",
         "lastName": "Account",
         "email": "testing@email.com",
-        "phone": 123456789,
-        "address": {
-            "street": "123 Main Road",
-            "city": "Somewhere",
-            "state": "ID",
-            "zipCode": 12345
-        },
+        "phone": 9876543210,
+        "street": "456 Main Avenue",
+        "city": "Nowhere",
+        "state": "ID",
+        "zipCode": 54321,
         "accountType": "Customer"
     },
     {
         "firstName": "Another",
         "lastName": "Test",
-        "email": "lisachuang81@gmail.com",
-        "phone": 456789123,
-        "address": {
-            "street": "321 Main Road",
-            "city": "Someplace",
-            "state": "ID",
-            "zipCode": 98765
-        },
+        "email": "atest@email.com",
+        "phone": 4561237890,
+        "street": "789 Main Avenue",
+        "city": "Over There",
+        "state": "ID",
+        "zipCode": 98765,
         "accountType": "Customer"
     },
     {
@@ -43,12 +37,10 @@
         "lastName": "Chuang",
         "email": "lisachuang2000@gmail.com",
         "phone": 456789123,
-        "address": {
-            "street": "321 Main Road",
-            "city": "Someplace",
-            "state": "ID",
-            "zipCode": 98765
-        },
+        "street": "321 Main Road",
+        "city": "Someplace",
+        "state": "ID",
+        "zipCode": 98765,
         "accountType": "Admin"
     }
 ]
