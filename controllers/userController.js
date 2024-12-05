@@ -5,6 +5,7 @@ const User = require('../models/userModel');
 // Display All Users
 const getUsers = async (req, res, next) => {
     // #swagger.description = 'Display All Users'
+    // #swagger.tags = ['users']
     
     try {
         const result = await User.find(); 
@@ -29,6 +30,7 @@ const getUsers = async (req, res, next) => {
 // Display Single User By Id
 const getUserById = async (req, res, next) => {
     // #swagger.description = 'Display Single User By Id'
+    // #swagger.tags = ['users']
 
     try {
         const userId = req.params.id;
@@ -62,6 +64,7 @@ const getUserById = async (req, res, next) => {
 // Create New User
 const createUser = async (req, res, next) => {
     // #swagger.description = 'Create a new user'
+    // #swagger.tags = ['users']
 
     try {
         const { 
@@ -106,6 +109,7 @@ const createUser = async (req, res, next) => {
 // Update User
 const updateUser = async (req, res, next) => {
     // #swagger.description = 'Update User'
+    // #swagger.tags = ['users']
 
     try {
         if (!ObjectId.isValid(req.params.id)) {
@@ -166,6 +170,7 @@ const updateUser = async (req, res, next) => {
 // Delete User
 const deleteUser = async (req, res, next) => {
     // #swagger.description = 'Delete User'
+    // #swagger.tags = ['users']
 
     try {
         if (!ObjectId.isValid(req.params.id)) {
