@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const ObjectId = mongoose.Types.ObjectId;
 const Order = require('../models/orderModel');
-const userController = require('../controllers/userController');
 
 const findAllByAdmin = async (req, res, next) => {
   /* #swagger.description = "Retrieve all orders(Admin only)."
@@ -114,12 +113,19 @@ const createOrder = async (req, res, next) => {
       notes
     } = req.body;
 
-    if (!userId || !products || !totalAmount || !shipping || !payment) {
+    const missingFields = []
+
+    if (!userId) missingFields.push('userId');
+    if (!products) missingFields.push('products');
+    if (!totalAmount) missingFields.push('totalAmount');
+    if (!shipping) missingFields.push('shipping');
+    if (!payment) missingFields.push('payment');
+
+    if (missingFields.length > 0) {
       return res.status(400).json({
         success: false,
-        message:
-          'Invalid parameters: userId, products, orderDate, status, totalAmount, shipping, and payment are required.'
-      });
+        message: `Missing or invalid parameters: ${missingFields.join(', ')}`
+      })
     }
 
     const newOrder = new Order({
@@ -179,19 +185,21 @@ const updateOrderById = async (req, res, next) => {
       orderDate
     } = req.body;
 
-    if (
-      !userId ||
-      !products ||
-      !totalAmount ||
-      !shipping ||
-      !payment ||
-      !createdAt ||
-      !orderDate
-    ) {
+    const missingFields = []
+
+    if (!userId) missingFields.push('userId');
+    if (!products) missingFields.push('products');
+    if (!totalAmount) missingFields.push('totalAmount');
+    if (!shipping) missingFields.push('shipping');
+    if (!payment) missingFields.push('payment');
+    if (!createdAt) missingFields.push('createdAt');
+    if (!orderDate) missingFields.push('orderDate');
+    
+    if (missingFields.length > 0) {
       return res.status(400).json({
         success: false,
         message:
-          'Invalid parameters: userId, products, orderDate, status, totalAmount, shipping, and payment are required.'
+          `Required parameter(s): ${missingFields.join(', ')}`
       });
     }
 

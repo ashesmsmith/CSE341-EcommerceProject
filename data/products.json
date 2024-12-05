@@ -1,182 +1,182 @@
 [
-    {
-      "productId": 1,
-      "name": "Wireless Earbuds",
-      "category": "Electronics",
-      "price": 49.99,
-      "stock": 120,
-      "description": "Bluetooth 5.0 earbuds with noise cancellation.",
-      "imageUrl": "https://example.com/images/earbuds.jpg"
-    },
-    {
-      "productId": 2,
-      "name": "Fitness Tracker",
-      "category": "Wearables",
-      "price": 29.99,
-      "stock": 80,
-      "description": "Track your steps, heart rate, and sleep patterns.",
-      "imageUrl": "https://example.com/images/fitness-tracker.jpg"
-    },
-    {
-      "productId": 3,
-      "name": "Smartphone Case",
-      "category": "Accessories",
-      "price": 15.99,
-      "stock": 300,
-      "description": "Durable, shockproof case for all phone models.",
-      "imageUrl": "https://example.com/images/phone-case.jpg"
-    },
-    {
-      "productId": 4,
-      "name": "Mechanical Keyboard",
-      "category": "Computers",
-      "price": 89.99,
-      "stock": 60,
-      "description": "RGB backlit mechanical keyboard with blue switches.",
-      "imageUrl": "https://example.com/images/keyboard.jpg"
-    },
-    {
-      "productId": 5,
-      "name": "Gaming Mouse",
-      "category": "Computers",
-      "price": 39.99,
-      "stock": 200,
-      "description": "Ergonomic gaming mouse with customizable buttons.",
-      "imageUrl": "https://example.com/images/gaming-mouse.jpg"
-    },
-    {
-      "productId": 6,
-      "name": "4K Monitor",
-      "category": "Electronics",
-      "price": 299.99,
-      "stock": 35,
-      "description": "27-inch UHD monitor with HDR10 support.",
-      "imageUrl": "https://example.com/images/4k-monitor.jpg"
-    },
-    {
-      "productId": 7,
-      "name": "Portable Charger",
-      "category": "Accessories",
-      "price": 24.99,
-      "stock": 150,
-      "description": "10,000mAh power bank with fast charging.",
-      "imageUrl": "https://example.com/images/power-bank.jpg"
-    },
-    {
-      "productId": 8,
-      "name": "Wireless Mouse",
-      "category": "Computers",
-      "price": 19.99,
-      "stock": 250,
-      "description": "Compact and reliable wireless mouse.",
-      "imageUrl": "https://example.com/images/wireless-mouse.jpg"
-    },
-    {
-      "productId": 9,
-      "name": "Desk Lamp",
-      "category": "Home Office",
-      "price": 22.99,
-      "stock": 100,
-      "description": "LED desk lamp with adjustable brightness.",
-      "imageUrl": "https://example.com/images/desk-lamp.jpg"
-    },
-    {
-      "productId": 10,
-      "name": "Noise-Cancelling Headphones",
-      "category": "Electronics",
-      "price": 99.99,
-      "stock": 70,
-      "description": "Over-ear headphones with active noise cancellation.",
-      "imageUrl": "https://example.com/images/headphones.jpg"
-    },
-    {
-      "productId": 11,
-      "name": "Standing Desk",
-      "category": "Furniture",
-      "price": 199.99,
-      "stock": 40,
-      "description": "Adjustable height standing desk for better posture.",
-      "imageUrl": "https://example.com/images/standing-desk.jpg"
-    },
-    {
-      "productId": 12,
-      "name": "Ergonomic Office Chair",
-      "category": "Furniture",
-      "price": 149.99,
-      "stock": 50,
-      "description": "Supportive and comfortable chair for long work hours.",
-      "imageUrl": "https://example.com/images/office-chair.jpg"
-    },
-    {
-      "productId": 13,
-      "name": "Laptop Backpack",
-      "category": "Accessories",
-      "price": 34.99,
-      "stock": 180,
-      "description": "Water-resistant backpack with multiple compartments.",
-      "imageUrl": "https://example.com/images/backpack.jpg"
-    },
-    {
-      "productId": 14,
-      "name": "Wireless Charger",
-      "category": "Accessories",
-      "price": 18.99,
-      "stock": 220,
-      "description": "Qi-certified wireless charging pad.",
-      "imageUrl": "https://example.com/images/wireless-charger.jpg"
-    },
-    {
-      "productId": 15,
-      "name": "Gaming Chair",
-      "category": "Furniture",
-      "price": 219.99,
-      "stock": 25,
-      "description": "Comfortable gaming chair with lumbar support.",
-      "imageUrl": "https://example.com/images/gaming-chair.jpg"
-    },
-    {
-      "productId": 16,
-      "name": "Smart Home Speaker",
-      "category": "Electronics",
-      "price": 59.99,
-      "stock": 95,
-      "description": "Voice-controlled speaker with built-in assistant.",
-      "imageUrl": "https://example.com/images/smart-speaker.jpg"
-    },
-    {
-      "productId": 17,
-      "name": "Electric Kettle",
-      "category": "Kitchen",
-      "price": 39.99,
-      "stock": 75,
-      "description": "1.7-liter electric kettle with temperature control.",
-      "imageUrl": "https://example.com/images/kettle.jpg"
-    },
-    {
-      "productId": 18,
-      "name": "Blender",
-      "category": "Kitchen",
-      "price": 49.99,
-      "stock": 85,
-      "description": "High-speed blender for smoothies and sauces.",
-      "imageUrl": "https://example.com/images/blender.jpg"
-    },
-    {
-      "productId": 19,
-      "name": "Water Bottle",
-      "category": "Outdoor",
-      "price": 14.99,
-      "stock": 300,
-      "description": "Stainless steel insulated water bottle.",
-      "imageUrl": "https://example.com/images/water-bottle.jpg"
-    },
-    {
-      "productId": 20,
-      "name": "Camping Tent",
-      "category": "Outdoor",
-      "price": 129.99,
-      "stock": 40,
-      "description": "Spacious 4-person tent for outdoor adventures.",
-      "imageUrl": "https://example.com/images/camping-tent.jpg"
-    }
+  {
+    "productId": 1,
+    "name": "Wireless Earbuds",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock": 120,
+    "description": "Bluetooth 5.0 earbuds with noise cancellation.",
+    "imageUrl": "https://example.com/images/earbuds.jpg"
+  },
+  {
+    "productId": 2,
+    "name": "Fitness Tracker",
+    "category": "Wearables",
+    "price": 29.99,
+    "stock": 80,
+    "description": "Track your steps, heart rate, and sleep patterns.",
+    "imageUrl": "https://example.com/images/fitness-tracker.jpg"
+  },
+  {
+    "productId": 3,
+    "name": "Smartphone Case",
+    "category": "Accessories",
+    "price": 15.99,
+    "stock": 300,
+    "description": "Durable, shockproof case for all phone models.",
+    "imageUrl": "https://example.com/images/phone-case.jpg"
+  },
+  {
+    "productId": 4,
+    "name": "Mechanical Keyboard",
+    "category": "Computers",
+    "price": 89.99,
+    "stock": 60,
+    "description": "RGB backlit mechanical keyboard with blue switches.",
+    "imageUrl": "https://example.com/images/keyboard.jpg"
+  },
+  {
+    "productId": 5,
+    "name": "Gaming Mouse",
+    "category": "Computers",
+    "price": 39.99,
+    "stock": 200,
+    "description": "Ergonomic gaming mouse with customizable buttons.",
+    "imageUrl": "https://example.com/images/gaming-mouse.jpg"
+  },
+  {
+    "productId": 6,
+    "name": "4K Monitor",
+    "category": "Electronics",
+    "price": 299.99,
+    "stock": 35,
+    "description": "27-inch UHD monitor with HDR10 support.",
+    "imageUrl": "https://example.com/images/4k-monitor.jpg"
+  },
+  {
+    "productId": 7,
+    "name": "Portable Charger",
+    "category": "Accessories",
+    "price": 24.99,
+    "stock": 150,
+    "description": "10,000mAh power bank with fast charging.",
+    "imageUrl": "https://example.com/images/power-bank.jpg"
+  },
+  {
+    "productId": 8,
+    "name": "Wireless Mouse",
+    "category": "Computers",
+    "price": 19.99,
+    "stock": 250,
+    "description": "Compact and reliable wireless mouse.",
+    "imageUrl": "https://example.com/images/wireless-mouse.jpg"
+  },
+  {
+    "productId": 9,
+    "name": "Desk Lamp",
+    "category": "Home Office",
+    "price": 22.99,
+    "stock": 100,
+    "description": "LED desk lamp with adjustable brightness.",
+    "imageUrl": "https://example.com/images/desk-lamp.jpg"
+  },
+  {
+    "productId": 10,
+    "name": "Noise-Cancelling Headphones",
+    "category": "Electronics",
+    "price": 99.99,
+    "stock": 70,
+    "description": "Over-ear headphones with active noise cancellation.",
+    "imageUrl": "https://example.com/images/headphones.jpg"
+  },
+  {
+    "productId": 11,
+    "name": "Standing Desk",
+    "category": "Furniture",
+    "price": 199.99,
+    "stock": 40,
+    "description": "Adjustable height standing desk for better posture.",
+    "imageUrl": "https://example.com/images/standing-desk.jpg"
+  },
+  {
+    "productId": 12,
+    "name": "Ergonomic Office Chair",
+    "category": "Furniture",
+    "price": 149.99,
+    "stock": 50,
+    "description": "Supportive and comfortable chair for long work hours.",
+    "imageUrl": "https://example.com/images/office-chair.jpg"
+  },
+  {
+    "productId": 13,
+    "name": "Laptop Backpack",
+    "category": "Accessories",
+    "price": 34.99,
+    "stock": 180,
+    "description": "Water-resistant backpack with multiple compartments.",
+    "imageUrl": "https://example.com/images/backpack.jpg"
+  },
+  {
+    "productId": 14,
+    "name": "Wireless Charger",
+    "category": "Accessories",
+    "price": 18.99,
+    "stock": 220,
+    "description": "Qi-certified wireless charging pad.",
+    "imageUrl": "https://example.com/images/wireless-charger.jpg"
+  },
+  {
+    "productId": 15,
+    "name": "Gaming Chair",
+    "category": "Furniture",
+    "price": 219.99,
+    "stock": 25,
+    "description": "Comfortable gaming chair with lumbar support.",
+    "imageUrl": "https://example.com/images/gaming-chair.jpg"
+  },
+  {
+    "productId": 16,
+    "name": "Smart Home Speaker",
+    "category": "Electronics",
+    "price": 59.99,
+    "stock": 95,
+    "description": "Voice-controlled speaker with built-in assistant.",
+    "imageUrl": "https://example.com/images/smart-speaker.jpg"
+  },
+  {
+    "productId": 17,
+    "name": "Electric Kettle",
+    "category": "Kitchen",
+    "price": 39.99,
+    "stock": 75,
+    "description": "1.7-liter electric kettle with temperature control.",
+    "imageUrl": "https://example.com/images/kettle.jpg"
+  },
+  {
+    "productId": 18,
+    "name": "Blender",
+    "category": "Kitchen",
+    "price": 49.99,
+    "stock": 85,
+    "description": "High-speed blender for smoothies and sauces.",
+    "imageUrl": "https://example.com/images/blender.jpg"
+  },
+  {
+    "productId": 19,
+    "name": "Water Bottle",
+    "category": "Outdoor",
+    "price": 14.99,
+    "stock": 300,
+    "description": "Stainless steel insulated water bottle.",
+    "imageUrl": "https://example.com/images/water-bottle.jpg"
+  },
+  {
+    "productId": 20,
+    "name": "Camping Tent",
+    "category": "Outdoor",
+    "price": 129.99,
+    "stock": 40,
+    "description": "Spacious 4-person tent for outdoor adventures.",
+    "imageUrl": "https://example.com/images/camping-tent.jpg"
+  }
 ]
