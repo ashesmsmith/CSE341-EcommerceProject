@@ -31,5 +31,16 @@
         "state": "ID",
         "zipCode": 98765,
         "accountType": "Customer"
+    },
+    {
+        "firstName": "Min-ting",
+        "lastName": "Chuang",
+        "email": "lisachuang2000@gmail.com",
+        "phone": 456789123,
+        "street": "321 Main Road",
+        "city": "Someplace",
+        "state": "ID",
+        "zipCode": 98765,
+        "accountType": "Admin"
     }
 ]

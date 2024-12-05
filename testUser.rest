@@ -1,0 +1,8 @@
+@baseURL = http://localhost:3000
+
+### Retrieve all users
+GET {{baseURL}}/users
+
+
+### Retrieve a user by ID
+GET  {{baseURL}}/users/674fab58cc9ffd86f47853db

@@ -1,16 +1,16 @@
-const { Schema, model } = require("mongoose")
+const { Schema, model, Types } = require("mongoose")
 
 const orderSchema = new Schema(
     {
         userId: {
-            type: Schema.Types.ObjectId,
+            type: Types.ObjectId,
             ref: "User",
             required: true
         },
         products: [
             {
                 productId: {
-                    type: Schema.Types.ObjectId,
+                    type: Types.ObjectId,
                     ref: "Product",
                     required: true,
                 },
@@ -34,7 +34,8 @@ const orderSchema = new Schema(
         status: {
             type: String,
             enum: ["pending", "processing", "shipped", "delivered", "cancelled"],
-            required: true
+            required: true,
+            default: "pending"
         },
         totalAmount: {
             type: Number,
@@ -72,6 +73,7 @@ const orderSchema = new Schema(
                 type: String,
                 enum: ["paid", "pending", "failed", "refunded"],
                 required: true,
+                default: "pending"
             }
         },
         deliveryDate: {
