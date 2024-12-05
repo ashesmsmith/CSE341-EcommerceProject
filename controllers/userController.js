@@ -1,25 +1,23 @@
-const mongodb = require('../data/database');
-const ObjectId = require('mongodb').ObjectId;
+const mongoose = require("mongoose")
+const ObjectId = mongoose.Types.ObjectId
+const User = require("../models/userModel")
 
 // Display All Users
 const getUsers = async (req, res) => {
-    const result = await mongodb.getDatabase().db().collection('users').find();
-
-    result.toArray().then((users) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users);
-    });
+    const result = await User.find()
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(result);
+    
 };
 
 // Display Single User
 const getUserById = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection('users').find({ _id: userId });
-
-    result.toArray().then((users) => {
+    const userId = req.params.id;
+    if (ObjectId.isValid(userId)) {
+        const result = await User.findById({_id: userId});
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users[0]);
-    });
+        res.status(200).json(result);
+    }     
 };
 
 // Create New User

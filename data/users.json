@@ -28,7 +28,7 @@
     {
         "firstName": "Another",
         "lastName": "Test",
-        "email": "atest@email.com",
+        "email": "lisachuang81@gmail.com",
         "phone": 456789123,
         "address": {
             "street": "321 Main Road",
@@ -37,5 +37,18 @@
             "zipCode": 98765
         },
         "accountType": "Customer"
+    },
+    {
+        "firstName": "Min-ting",
+        "lastName": "Chuang",
+        "email": "lisachuang2000@gmail.com",
+        "phone": 456789123,
+        "address": {
+            "street": "321 Main Road",
+            "city": "Someplace",
+            "state": "ID",
+            "zipCode": 98765
+        },
+        "accountType": "Admin"
     }
 ]

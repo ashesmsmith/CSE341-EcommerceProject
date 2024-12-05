@@ -1,0 +1,54 @@
+@baseURL = http://localhost:3000
+### Retrieve user profile
+GET {{baseURL}}/profile
+
+### Retrieve all orders
+GET {{baseURL}}/orders/all
+
+### Retrieve all of a user's orders
+GET {{baseURL}}/orders/user/{userId}
+
+### Retrieve an order by ID
+GET {{baseURL}}/orders/674fb7bdcc9ffd86f47853e1
+
+### Create a new order
+POST {{baseURL}}/orders
+Content-Type: application/json
+
+{
+    "userId": "63e57f7c8b9b65c2d1d5a3f1",
+    "products": [
+        {
+            "productId":  "63e57f7c8b9b65c2d1d5a3f2",
+            "quantity": 1,
+            "priceAtPurchase": 20.11
+        },
+        {
+            "productId": "63e57f7c8b9b65c2d1d5a3f3",
+            "quantity": 3,
+            "priceAtPurchase": 2.05
+        }
+    ],
+    "totalAmount": 26.26,
+    "shipping": {
+        "address": "111 Main Street, ABC ",
+        "method": "standard",
+        "cost": 5
+    },
+    "payment": {
+        "method": "credit card",
+        "status": "pending"
+    },
+    "notes": "Leave the parcel to the doorman."
+}
+
+
+### Update an order by ID
+PUT {{baseURL}}/orders/{id}
+Content-Type: application/json
+
+# { copy an order object and modify something }
+
+
+### Delete an order by ID
+DELETE {{baseURL}}/orders/675015781801d4e131360cf7
