@@ -183,10 +183,9 @@ const updateOrderRules = [
 const validateOrder = (req, res, next) => {
   const errors = validationResult(req);
 
-  if (errors.notEmpty) {
+  if (!errors.isEmpty()) {
     return res.status(400).json({
       success: false,
-      message: 'Order validation failed.',
       errors: errors.array()
     });
   }
