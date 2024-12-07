@@ -3,6 +3,7 @@ const router = require('express').Router();
 const orderRoute = require('./orderRoute');
 const userRoute = require('./userRoute');
 const productRoute = require('./productRoute');
+const reviewRoute = require('./reviewRoute');
 const { checkAuth } = require('../utils/Oauth');
 
 router.get('/', (req, res) => {
@@ -29,5 +30,7 @@ router.use('/orders', orderRoute);
 router.use('/users', userRoute);
 
 router.use('/products', productRoute);
+
+router.use('/reviews', reviewRoute);
 
 module.exports = router;

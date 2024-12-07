@@ -1,0 +1,36 @@
+### Add a Review
+POST http://localhost:3000/reviews
+Content-Type: application/json
+Authorization: Bearer <your-auth-token>
+
+{
+  "productId": "64b1cfd6f46eaf001c2bdb71",
+  "userId": "64b1cfd6f46eaf001c2bdb70",
+  "rating": 5,
+  "comment": "Amazing product!"
+}
+
+###
+
+### Fetch Reviews for a Product
+GET http://localhost:3000/reviews/64b1cfd6f46eaf001c2bdb71
+Authorization: Bearer <your-auth-token>
+
+###
+
+### Update a Review
+PUT http://localhost:3000/reviews/64b1cfd6f46eaf001c2bdb72
+Content-Type: application/json
+Authorization: Bearer <your-auth-token>
+
+{
+  "userId": "64b1cfd6f46eaf001c2bdb70",
+  "rating": 4,
+  "comment": "Updated review: Still great, but shipping was slow."
+}
+
+###
+
+### Delete a Review (Admin only)
+DELETE http://localhost:3000/reviews/64b1cfd6f46eaf001c2bdb72
+Authorization: Bearer <your-admin-auth-token>

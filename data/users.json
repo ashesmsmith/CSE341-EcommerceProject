@@ -53,5 +53,16 @@
     "state": "UT",
     "zipCode": 12345,
     "accountType": "Admin"
+  },
+  {
+    "firstName": "Vince",
+    "lastName": "Jularbal",
+    "email": "vincejularbal@gmail.com",
+    "phone": 6399979642,
+    "street": "Gungab",
+    "city": "Ormoc",
+    "state": "Phils.",
+    "zipCode": 6542,
+    "accountType": "Admin"
   }
 ]
