@@ -98,7 +98,17 @@ const updateProduct = async (req, res, next) => {
         message: 'Invalid ID format'
       });
     }
-    const updatedProduct = req.body;
+    const { productId, name, category, price, stock, description, imageUrl } =
+    req.body;
+    const updatedProduct = new Product({
+      productId,
+      name,
+      category,
+      price,
+      stock,
+      description,
+      imageUrl
+    });
     const result = await Product.findOneAndReplace(
       { _id: id },
       updatedProduct,
