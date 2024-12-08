@@ -50,7 +50,7 @@ const findAllByUser = async (req, res, next) => {
         data: result
       });
     } else {
-      return res.status(200).json({
+      return res.status(404).json({
         success: true,
         data: [],
         message: 'No order found'
