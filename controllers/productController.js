@@ -88,8 +88,8 @@ const createProduct = async (req, res, next) => {
 };
 
 const updateProduct = async (req, res, next) => {
-  /* #swagger.description = "Update a product by ID (Admin only)"
-       #swagger.tags = ["products"] */
+  /*#swagger.description = "Update a product by ID (Admin only)"
+    #swagger.tags = ["products"] */
   try {
     const id = req.params.id;
     if (!ObjectId.isValid(id)) {
@@ -98,7 +98,17 @@ const updateProduct = async (req, res, next) => {
         message: 'Invalid ID format'
       });
     }
-    const updatedProduct = req.body;
+    const { productId, name, category, price, stock, description, imageUrl } =
+      req.body;
+    const updatedProduct = {
+      productId,
+      name,
+      category,
+      price,
+      stock,
+      description,
+      imageUrl
+    };
     const result = await Product.findOneAndReplace(
       { _id: id },
       updatedProduct,
@@ -109,7 +119,7 @@ const updateProduct = async (req, res, next) => {
         success: false,
         message: 'Product not found or could not be updated'
       });
-    }
+    };
     return res.status(200).json({
       success: true,
       data: result
