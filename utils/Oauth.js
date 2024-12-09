@@ -28,7 +28,7 @@ const checkAdmin = async (req, res, next) => {
     if (!result) {
       return res.status(404).json({
         success: false,
-        message: 'User not found'
+        message: 'Admin privileges are required'
       });
     }
 
