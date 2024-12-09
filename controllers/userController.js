@@ -161,7 +161,7 @@ const updateUser = async (req, res, next) => {
       });
     }
 
-    const updatedUser = new User({
+    const updatedUser = {
       firstName,
       lastName,
       email,
@@ -171,7 +171,7 @@ const updateUser = async (req, res, next) => {
       state,
       zipCode,
       accountType
-    });
+    };
 
     const result = await User.findOneAndReplace({ _id: userId }, updatedUser);
 
