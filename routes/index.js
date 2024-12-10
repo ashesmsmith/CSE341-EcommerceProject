@@ -35,4 +35,5 @@ router.use('/products', productRoute);
 
 router.use('/reviews', reviewRoute);
 
+router.use('/api-docs', swaggerRoute);
 module.exports = router;
