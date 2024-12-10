@@ -38,7 +38,8 @@ const userSchema = new Schema({
     required: true,
     enum: ['Admin', 'Customer']
   }
-});
+}, { timestamps: true}
+);
 
 const userModel = model('User', userSchema);
 

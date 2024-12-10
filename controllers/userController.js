@@ -107,6 +107,7 @@ const createUser = async (req, res, next) => {
     });
 
     const result = await newUser.save();
+    
     return res.status(201).json({
       success: true,
       data: result
@@ -122,13 +123,14 @@ const updateUser = async (req, res, next) => {
   // #swagger.tags = ['users']
 
   try {
-    if (!ObjectId.isValid(req.params.id)) {
+    const userId = req.params.id;
+
+    if (!ObjectId.isValid(userId)) {
       return res.status(400).json({
         success: false,
         message: 'Invalid UserId.'
       });
     }
-    const userId = req.params.id;
 
     const {
       firstName,
@@ -159,7 +161,7 @@ const updateUser = async (req, res, next) => {
       });
     }
 
-    const updatedUser = new User({
+    const updatedUser = {
       firstName,
       lastName,
       email,
@@ -169,19 +171,20 @@ const updateUser = async (req, res, next) => {
       state,
       zipCode,
       accountType
-    });
+    };
 
-    const result = await User.findById(userId, updatedUser, { new: true });
+    const result = await User.findOneAndReplace({ _id: userId }, updatedUser);
+
     if (!result) {
       return res.status(404).json({
         success: false,
-        message: `User ${userId} not found`
+        message: `User ${userId} not found.`
       });
     }
     return res.status(200).json({
       success: true,
       data: result,
-      message: `User ${userId} successfully updated`
+      message: `User ${userId} successfully updated.`
     });
   } catch (error) {
     next(error);
