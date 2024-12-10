@@ -1,36 +1,35 @@
-### Add a Review
-POST http://localhost:3000/reviews
+### Add a new review
+POST http://localhost:3000/reviews/
 Content-Type: application/json
-Authorization: Bearer <your-auth-token>
+Authorization: Bearer <your_token_here>
 
 {
-  "productId": "64b1cfd6f46eaf001c2bdb71",
-  "userId": "64b1cfd6f46eaf001c2bdb70",
+  "productId": "6751cbc96aac217c1f5aa76e",
+  "userId": "6751341f7a01e019ffafb9db",
   "rating": 5,
-  "comment": "Amazing product!"
+  "comment": "Excellent product!"
 }
 
-###
+### Get all reviews (Admin only)
+GET http://localhost:3000/reviews/
+Authorization: Bearer <admin_token_here>
 
-### Fetch Reviews for a Product
-GET http://localhost:3000/reviews/64b1cfd6f46eaf001c2bdb71
-Authorization: Bearer <your-auth-token>
+### Get reviews by product ID
+GET http://localhost:3000/reviews/product/6751cbc96aac217c1f5aa76e
 
-###
+### Get review by ID
+GET http://localhost:3000/reviews/6752e6b7c8d2e4a71c3e01f7
 
-### Update a Review
-PUT http://localhost:3000/reviews/64b1cfd6f46eaf001c2bdb72
+### Update review by ID
+PUT http://localhost:3000/reviews/6752e6b7c8d2e4a71c3e01f7
 Content-Type: application/json
-Authorization: Bearer <your-auth-token>
+Authorization: Bearer <user_token_here>
 
 {
-  "userId": "64b1cfd6f46eaf001c2bdb70",
   "rating": 4,
-  "comment": "Updated review: Still great, but shipping was slow."
+  "comment": "Updated comment."
 }
 
-###
-
-### Delete a Review (Admin only)
-DELETE http://localhost:3000/reviews/64b1cfd6f46eaf001c2bdb72
-Authorization: Bearer <your-admin-auth-token>
+### Delete review by ID
+DELETE http://localhost:3000/reviews/6752e6b7c8d2e4a71c3e01f7
+Authorization: Bearer <admin_token_here>

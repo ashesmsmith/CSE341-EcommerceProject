@@ -33,4 +33,6 @@ router.use('/users', userRoute);
 
 router.use('/products', productRoute);
 
+router.use('/reviews', reviewRoute);
+
 module.exports = router;

@@ -4,12 +4,12 @@ const reviewSchema = new Schema(
   {
     productId: {
       type: Types.ObjectId,
-      ref: 'products',
+      ref: 'Product',
       required: true
     },
     userId: {
       type: Types.ObjectId,
-      ref: 'users',
+      ref: 'User',
       required: true
     },
     rating: {
@@ -27,7 +27,7 @@ const reviewSchema = new Schema(
       default: Date.now
     }
   },
-  { timestamps: true }
+  { timestamps: true } // Adds createdAt and updatedAt fields
 );
 
 const Review = model('Review', reviewSchema);
