@@ -1,142 +1,114 @@
 [
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa76e" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9db" },
+    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
     "rating": 5,
-    "comment": "Fantastic earbuds with amazing sound quality!",
-    "createdAt": "2024-12-01T10:00:00Z"
+    "comment": "The earbuds are fantastic! Great sound quality.",
+    "createdAt": "2024-12-01T10:00:00Z",
+    "updatedAt": "2024-12-01T10:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa76f" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
+    "userId": { "$oid": "675338b5556d5a90cf74ae6c" },
     "rating": 4,
-    "comment": "Great fitness tracker, but could use a better display.",
-    "createdAt": "2024-12-02T11:00:00Z"
+    "comment": "The fitness tracker is useful, but syncing takes time.",
+    "createdAt": "2024-12-02T14:00:00Z",
+    "updatedAt": "2024-12-02T14:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa770" },
     "userId": { "$oid": "6751341f7a01e019ffafb9dd" },
     "rating": 3,
-    "comment": "The phone case fits well but looks a bit plain.",
-    "createdAt": "2024-12-03T09:30:00Z"
+    "comment": "The smartphone case is decent but feels cheap.",
+    "createdAt": "2024-12-03T08:00:00Z",
+    "updatedAt": "2024-12-03T08:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa771" },
     "userId": { "$oid": "6751c2756e1ad0cdab5587e5" },
     "rating": 5,
-    "comment": "This mechanical keyboard is fantastic for gaming!",
-    "createdAt": "2024-12-03T12:45:00Z"
+    "comment": "I love the keyboard! The RGB lighting is vibrant.",
+    "createdAt": "2024-12-04T11:00:00Z",
+    "updatedAt": "2024-12-04T11:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa772" },
     "userId": { "$oid": "6751c9f8c8ed4d67dc0efd09" },
     "rating": 4,
-    "comment": "A solid gaming mouse with excellent ergonomics.",
-    "createdAt": "2024-12-04T14:00:00Z"
+    "comment": "The gaming mouse is comfortable but lacks weight customization.",
+    "createdAt": "2024-12-05T12:00:00Z",
+    "updatedAt": "2024-12-05T12:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa773" },
     "userId": { "$oid": "6752c8b4fa5fd6cb5f8cc175" },
     "rating": 5,
-    "comment": "The 4K monitor is stunning! Highly recommended.",
-    "createdAt": "2024-12-05T10:15:00Z"
+    "comment": "The 4K monitor is crystal clear! Perfect for work and gaming.",
+    "createdAt": "2024-12-06T15:00:00Z",
+    "updatedAt": "2024-12-06T15:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa774" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9db" },
-    "rating": 4,
-    "comment": "Portable charger is reliable but a bit bulky.",
-    "createdAt": "2024-12-05T16:00:00Z"
+    "userId": { "$oid": "6754f356ddaa9fbc7711f35a" },
+    "rating": 5,
+    "comment": "This power bank charges my devices quickly. Highly recommend!",
+    "createdAt": "2024-12-07T10:00:00Z",
+    "updatedAt": "2024-12-07T10:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa775" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
-    "rating": 5,
-    "comment": "Wireless mouse is smooth and works flawlessly.",
-    "createdAt": "2024-12-06T13:30:00Z"
+    "userId": { "$oid": "675338b5556d5a90cf74ae6c" },
+    "rating": 4,
+    "comment": "The wireless mouse is good but feels slightly too small for my hands.",
+    "createdAt": "2024-12-08T14:00:00Z",
+    "updatedAt": "2024-12-08T14:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa776" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9dd" },
+    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
     "rating": 5,
-    "comment": "This desk lamp is a must-have for workspaces.",
-    "createdAt": "2024-12-07T08:45:00Z"
+    "comment": "The desk lamp is sturdy and has great adjustable brightness.",
+    "createdAt": "2024-12-09T11:00:00Z",
+    "updatedAt": "2024-12-09T11:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa777" },
-    "userId": { "$oid": "6751c2756e1ad0cdab5587e5" },
-    "rating": 5,
-    "comment": "Headphones are incredibly comfortable and sound great.",
-    "createdAt": "2024-12-07T15:20:00Z"
+    "userId": { "$oid": "6751341f7a01e019ffafb9dd" },
+    "rating": 4,
+    "comment": "These headphones cancel noise effectively. Great purchase.",
+    "createdAt": "2024-12-10T09:00:00Z",
+    "updatedAt": "2024-12-10T09:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa778" },
-    "userId": { "$oid": "6751c9f8c8ed4d67dc0efd09" },
-    "rating": 4,
-    "comment": "Standing desk is sturdy but takes effort to assemble.",
-    "createdAt": "2024-12-08T09:10:00Z"
+    "userId": { "$oid": "6751c2756e1ad0cdab5587e5" },
+    "rating": 5,
+    "comment": "This standing desk changed the way I work. Love it!",
+    "createdAt": "2024-12-11T13:00:00Z",
+    "updatedAt": "2024-12-11T13:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa779" },
-    "userId": { "$oid": "6752c8b4fa5fd6cb5f8cc175" },
-    "rating": 5,
-    "comment": "Office chair is supportive and ideal for long hours.",
-    "createdAt": "2024-12-09T14:30:00Z"
+    "userId": { "$oid": "6751c9f8c8ed4d67dc0efd09" },
+    "rating": 4,
+    "comment": "The office chair provides great support for long hours.",
+    "createdAt": "2024-12-12T16:00:00Z",
+    "updatedAt": "2024-12-12T16:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa77a" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9db" },
-    "rating": 4,
-    "comment": "Backpack is water-resistant and has plenty of space.",
-    "createdAt": "2024-12-09T16:45:00Z"
+    "userId": { "$oid": "6752c8b4fa5fd6cb5f8cc175" },
+    "rating": 5,
+    "comment": "This backpack has plenty of compartments and looks stylish!",
+    "createdAt": "2024-12-13T18:00:00Z",
+    "updatedAt": "2024-12-13T18:00:00Z"
   },
   {
     "productId": { "$oid": "6751cbc96aac217c1f5aa77b" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
-    "rating": 5,
-    "comment": "Wireless charger is fast and compact.",
-    "createdAt": "2024-12-10T12:00:00Z"
-  },
-  {
-    "productId": { "$oid": "6751cbc96aac217c1f5aa77c" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9dd" },
-    "rating": 5,
-    "comment": "Gaming chair is super comfortable with great lumbar support.",
-    "createdAt": "2024-12-10T15:45:00Z"
-  },
-  {
-    "productId": { "$oid": "6751cbc96aac217c1f5aa77d" },
-    "userId": { "$oid": "6751c2756e1ad0cdab5587e5" },
+    "userId": { "$oid": "6754f356ddaa9fbc7711f35a" },
     "rating": 4,
-    "comment": "Smart speaker is responsive but needs better bass.",
-    "createdAt": "2024-12-11T09:20:00Z"
-  },
-  {
-    "productId": { "$oid": "6751cbc96aac217c1f5aa77e" },
-    "userId": { "$oid": "6751c9f8c8ed4d67dc0efd09" },
-    "rating": 5,
-    "comment": "Kettle heats up quickly and is easy to use.",
-    "createdAt": "2024-12-12T11:00:00Z"
-  },
-  {
-    "productId": { "$oid": "6751cbc96aac217c1f5aa77f" },
-    "userId": { "$oid": "6752c8b4fa5fd6cb5f8cc175" },
-    "rating": 5,
-    "comment": "Blender is powerful and perfect for smoothies.",
-    "createdAt": "2024-12-12T14:15:00Z"
-  },
-  {
-    "productId": { "$oid": "6751cbc96aac217c1f5aa780" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9db" },
-    "rating": 5,
-    "comment": "Water bottle keeps drinks cold all day long.",
-    "createdAt": "2024-12-13T10:10:00Z"
-  },
-  {
-    "productId": { "$oid": "6751cbc96aac217c1f5aa781" },
-    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
-    "rating": 5,
-    "comment": "Camping tent is spacious and great for adventures.",
-    "createdAt": "2024-12-14T11:45:00Z"
+    "comment": "Wireless charging works great, but it feels a bit slow.",
+    "createdAt": "2024-12-14T12:00:00Z",
+    "updatedAt": "2024-12-14T12:00:00Z"
   }
 ]

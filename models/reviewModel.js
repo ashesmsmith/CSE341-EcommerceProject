@@ -21,14 +21,13 @@ const reviewSchema = new Schema(
     comment: {
       type: String,
       required: true
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now
     }
   },
-  { timestamps: true } // Adds createdAt and updatedAt fields
+  { timestamps: true }
 );
+
+// Prevent duplicate reviews for the same product by the same user
+reviewSchema.index({ productId: 1, userId: 1 }, { unique: true });
 
 const Review = model('Review', reviewSchema);
 
