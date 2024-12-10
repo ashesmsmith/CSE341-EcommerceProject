@@ -1,0 +1,36 @@
+### Admin: Get all reviews
+GET http://localhost:3000/reviews/all
+Authorization: Bearer <admin_token_here>
+
+### Current User: Get reviews by current user
+GET http://localhost:3000/reviews/
+Authorization: Bearer <user_token_here>
+
+### Admin or Current User: Get review by ID
+GET http://localhost:3000/reviews/:reviewId
+Authorization: Bearer <user_token_here>
+
+### Add a new review
+POST http://localhost:3000/reviews/
+Authorization: Bearer <user_token_here>
+Content-Type: application/json
+
+{
+  "productId": "6751cbc96aac217c1f5aa76e",
+  "rating": 5,
+  "comment": "Excellent product!"
+}
+
+### Update a review
+PUT http://localhost:3000/reviews/:reviewId
+Authorization: Bearer <user_token_here>
+Content-Type: application/json
+
+{
+  "rating": 4,
+  "comment": "Updated comment."
+}
+
+### Delete a review
+DELETE http://localhost:3000/reviews/:reviewId
+Authorization: Bearer <user_token_here>

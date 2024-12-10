@@ -1,0 +1,114 @@
+[
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa76e" },
+    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
+    "rating": 5,
+    "comment": "The earbuds are fantastic! Great sound quality.",
+    "createdAt": "2024-12-01T10:00:00Z",
+    "updatedAt": "2024-12-01T10:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa76f" },
+    "userId": { "$oid": "675338b5556d5a90cf74ae6c" },
+    "rating": 4,
+    "comment": "The fitness tracker is useful, but syncing takes time.",
+    "createdAt": "2024-12-02T14:00:00Z",
+    "updatedAt": "2024-12-02T14:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa770" },
+    "userId": { "$oid": "6751341f7a01e019ffafb9dd" },
+    "rating": 3,
+    "comment": "The smartphone case is decent but feels cheap.",
+    "createdAt": "2024-12-03T08:00:00Z",
+    "updatedAt": "2024-12-03T08:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa771" },
+    "userId": { "$oid": "6751c2756e1ad0cdab5587e5" },
+    "rating": 5,
+    "comment": "I love the keyboard! The RGB lighting is vibrant.",
+    "createdAt": "2024-12-04T11:00:00Z",
+    "updatedAt": "2024-12-04T11:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa772" },
+    "userId": { "$oid": "6751c9f8c8ed4d67dc0efd09" },
+    "rating": 4,
+    "comment": "The gaming mouse is comfortable but lacks weight customization.",
+    "createdAt": "2024-12-05T12:00:00Z",
+    "updatedAt": "2024-12-05T12:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa773" },
+    "userId": { "$oid": "6752c8b4fa5fd6cb5f8cc175" },
+    "rating": 5,
+    "comment": "The 4K monitor is crystal clear! Perfect for work and gaming.",
+    "createdAt": "2024-12-06T15:00:00Z",
+    "updatedAt": "2024-12-06T15:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa774" },
+    "userId": { "$oid": "6754f356ddaa9fbc7711f35a" },
+    "rating": 5,
+    "comment": "This power bank charges my devices quickly. Highly recommend!",
+    "createdAt": "2024-12-07T10:00:00Z",
+    "updatedAt": "2024-12-07T10:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa775" },
+    "userId": { "$oid": "675338b5556d5a90cf74ae6c" },
+    "rating": 4,
+    "comment": "The wireless mouse is good but feels slightly too small for my hands.",
+    "createdAt": "2024-12-08T14:00:00Z",
+    "updatedAt": "2024-12-08T14:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa776" },
+    "userId": { "$oid": "6751341f7a01e019ffafb9dc" },
+    "rating": 5,
+    "comment": "The desk lamp is sturdy and has great adjustable brightness.",
+    "createdAt": "2024-12-09T11:00:00Z",
+    "updatedAt": "2024-12-09T11:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa777" },
+    "userId": { "$oid": "6751341f7a01e019ffafb9dd" },
+    "rating": 4,
+    "comment": "These headphones cancel noise effectively. Great purchase.",
+    "createdAt": "2024-12-10T09:00:00Z",
+    "updatedAt": "2024-12-10T09:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa778" },
+    "userId": { "$oid": "6751c2756e1ad0cdab5587e5" },
+    "rating": 5,
+    "comment": "This standing desk changed the way I work. Love it!",
+    "createdAt": "2024-12-11T13:00:00Z",
+    "updatedAt": "2024-12-11T13:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa779" },
+    "userId": { "$oid": "6751c9f8c8ed4d67dc0efd09" },
+    "rating": 4,
+    "comment": "The office chair provides great support for long hours.",
+    "createdAt": "2024-12-12T16:00:00Z",
+    "updatedAt": "2024-12-12T16:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa77a" },
+    "userId": { "$oid": "6752c8b4fa5fd6cb5f8cc175" },
+    "rating": 5,
+    "comment": "This backpack has plenty of compartments and looks stylish!",
+    "createdAt": "2024-12-13T18:00:00Z",
+    "updatedAt": "2024-12-13T18:00:00Z"
+  },
+  {
+    "productId": { "$oid": "6751cbc96aac217c1f5aa77b" },
+    "userId": { "$oid": "6754f356ddaa9fbc7711f35a" },
+    "rating": 4,
+    "comment": "Wireless charging works great, but it feels a bit slow.",
+    "createdAt": "2024-12-14T12:00:00Z",
+    "updatedAt": "2024-12-14T12:00:00Z"
+  }
+]

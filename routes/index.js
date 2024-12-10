@@ -3,6 +3,7 @@ const router = require('express').Router();
 const orderRoute = require('./orderRoute');
 const userRoute = require('./userRoute');
 const productRoute = require('./productRoute');
+const reviewRoute = require('./reviewRoute');
 const swaggerRoute = require('./swaggerRoute');
 const { checkAuth } = require('../utils/Oauth');
 
@@ -32,6 +33,6 @@ router.use('/users', userRoute);
 
 router.use('/products', productRoute);
 
-router.use('/api-docs', swaggerRoute)
+router.use('/reviews', reviewRoute);
 
 module.exports = router;
