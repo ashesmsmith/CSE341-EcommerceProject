@@ -34,5 +34,11 @@ describe('Test Users', () => {
         const res = await request.get('/users/1234567890abc');
         expect(res.statusCode).toBe(400);
         expect(res.body).toHaveProperty('message', 'Invalid UserId.');
-    })
+    });
+
+    test('GET /users/{invalid userID} for an error', async () => {
+        const res = await request.get('/users/1a');
+        expect(res.statusCode).toBe(400);
+        expect(res.body).toHaveProperty('message', 'Invalid UserId.');
+    });
 });
