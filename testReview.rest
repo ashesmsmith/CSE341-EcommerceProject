@@ -16,7 +16,8 @@ Authorization: Bearer <user_token_here>
 Content-Type: application/json
 
 {
-  "productId": "6751cbc96aac217c1f5aa76e",
+  "productId": "6751cbc96aac217c1f5aa770",
+  "userId": "6752c8b4fa5fd6cb5f8cc175",
   "rating": 5,
   "comment": "Excellent product!"
 }
