@@ -33,5 +33,5 @@ Content-Type: application/json
 }
 
 ### Delete a review
-DELETE http://localhost:3000/reviews/:reviewId
+DELETE http://localhost:3000/reviews/675b1cdc491d54f222213242
 Authorization: Bearer <user_token_here>
