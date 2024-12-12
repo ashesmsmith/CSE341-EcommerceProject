@@ -60,8 +60,8 @@ const addReview = async (req, res, next) => {
      }
   */
   try {
-    const { productId, rating, comment } = req.body;
-    const userId = req.oidc.user.sub;
+    const { productId, userId, rating, comment } = req.body;
+    //const userId = req.oidc.user.sub;
 
     const existingReview = await Review.findOne({ productId, userId });
     if (existingReview) {

@@ -14,6 +14,7 @@ reviewRoute.get('/:reviewId', checkAuth, validateReviewIdParam, reviewController
 
 // Create a Review
 reviewRoute.post('/', checkAuth, validateReviewCreation, reviewController.addReview);
+//reviewRoute.post('/', validateReviewCreation, reviewController.addReview);
 
 // Update a Review
 reviewRoute.put('/:reviewId', checkAuth, validateReviewUpdate, reviewController.updateReview);
