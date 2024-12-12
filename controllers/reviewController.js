@@ -113,13 +113,13 @@ const deleteReview = async (req, res, next) => {
   */
   try {
     const { reviewId } = req.params;
-    const review = await Review.findById(reviewId);
+    const review = await Review.findOneAndDelete({_id : reviewId});
 
     if (!review) {
       return res.status(404).json({ success: false, message: 'Review not found.' });
     }
 
-    await review.remove();
+    //await Review.remove();
     res.status(200).json({ success: true, message: 'Review deleted successfully.' });
   } catch (error) {
     next(error);
