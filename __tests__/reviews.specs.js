@@ -33,7 +33,7 @@ describe('Testing reviews', () => {
         expect(res.statusCode).toBe(200);
     })
 
-    test('GET /reviews/{id} when ID is correct', async() => {
+    test('GET /reviews/{id} when reviews ID is correct', async() => {
         const res = await request.get('/reviews/67581e548f0edf5246ca41a8')
         expect(res.header['content-type']).toMatch('application/json');
         expect(res.statusCode).toBe(200);
